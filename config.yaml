@@ -1,0 +1,32 @@
+# --- Project Settings ---
+
+# Data Paths
+RAW_DATA_DIR: "data/raw"
+PROCESSED_DATA_DIR: "data/processed"
+SYNTHETIC_DIR: "data/synthetic_dirt"
+DB_PATH: "database/training_log.db"
+
+# Image Processing
+IMAGE_SIZE: [224, 224]  # Standard for MobileNetV3
+CHANNELS: 3             # RGB
+
+# Training Hyperparameters
+BATCH_SIZE: 32          # How many images the AI studies at once
+EPOCHS: 20              # How many times it reads the whole dataset
+LEARNING_RATE: 0.0001   # How fast it learns (lower is safer)
+
+# Class Labels
+# IMPORTANT: These must match exactly what we train for
+FABRIC_CLASSES:
+  - "cotton"
+  - "denim"
+  - "wool"
+  - "polyester"
+  - "silk"
+
+DIRT_CLASSES:
+  - "clean"
+  - "mud"
+  - "oil"
+  - "grass"
+  - "wine"
